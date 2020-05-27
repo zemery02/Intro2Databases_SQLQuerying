@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Introduction to Databases and SQL Querying: Page 2</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Introduction to Databases and SQL Querying</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionTwo">
+      <h2>Section Two: Introduction to Querying</h2>
+      <div id="L3">
+        <h3>Lesson Three: Creating your First SQL Table</h3>
+        <ul>
+          <li>For our first database, we will just use our local machine for the server, but you can use the "connect" button to connect to a server from anywhere in the world.</li>
+          <li>When you install the Management Studio tool, there are a few pre-installed databases, but none that are user-created (obviously). You won't have to worry about anything other than the database folder
+              in the object explorer tab.
+          </li>
+          <li>If you were to click on the "New Query" button in the toolbar, a new blank screen would pop up, and at the bottom, it will tell you where you are querying from.</li>
+          <li>To create your first database, type into the new window that was just brought up: "create database mytestdb". The mytestdb was the name of the database, but everything else must be exactly as you see it.</li>
+          <li>This Management Studio tool can help you with the syntax because it will color code things that are a part of the syntax, versus things like names, and information for your database.</li>
+          <li>You can click the "Execute" button in the toolbar to create your database. Now if you hit the refresh button at the top of the Object Explorer tab, your database will show up in the database tab.</li>
+          <li>Thanks to this tool, you can also right click the database button in the object explorer tab, and you can enter a name and create a database like that as well.</li>
+          <li>Now, in the query window, you can now create your first table. To do this, type "create table mytesttable", go to the next line and place an opening parenthesis, and go to a third line. Now you can insert
+              the name of your table rows and the data type that you want in that row. For the first row, type "roolno int," to name it and insert the data type. For the next line/row, name the row firstname, and give
+              it the data type of "varchar(50)". This allows us to type in a string of letters with a maximum of 50 characters. For the last line, name the row, lastname, and give it the same data type and character
+              limit as the firstname row. Now you can end it by adding the ending parenthesis on another line by itself.
+          </li>
+          <li>Now, if you were to execute this now, it would file the table under the master database, but if you want it in the mytestdb, you can do one of two things. The first thing you can do, is preceed the
+              creation of the table (or the query), with a statement giving this query context, which would look like this "use mytestdb" if you use this method, make sure that you write it before the query. The second,
+              easier way to give the query context is to go to the dropdown menu in the toolbar and change it from master to the desired database, which in this case is mytestdb.
+          </li>
+          <li>Now that we've created our first table, we can now select data from it by writing this query: "select rollno, firstname, lastname from mytesttable", you don't need to, but it also doesn't hurt to give this
+              query context as well. When we execute this, nothing comes up, because we haven't inserted anything into the table.
+          </li>
+          <li>We can also use the GUI to do all of what we just did. To create a table, you can right click the table folder, and select the "Table..." item and you can name rows and give it a data type. You can also
+              select data from a table by right clicking the table and selecting "select top 1000 rows". It is preferred that you type out the queries however, because it is important tobe comfortable doing it both ways,
+              especially if you don't have a tool as handy as Management Studio in your day-today usage of SQL.
+          </li>
+          <li>Now to insert data into the table, you can write a query that looks like this "insert into mytesttable(rollno, firstname, lastname)", then on the nexct line, you can write "values(1, 'Zac', 'Emery')".</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="index.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page3.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
